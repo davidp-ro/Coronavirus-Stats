@@ -1,16 +1,21 @@
 """
     Small project to gather data from worldometers about the COVID outbreak
-and exporting it as a csv, or show graphs about it
+and exporting it as a csv, or show graphs about it <- WIP
 """
 
 # Gather data from https://www.worldometers.info/coronavirus/
-from gethtml import GetHTML
+from parsehtml import TestConnection, Scrape
 
 # Parse the data and convert it:
-from parsetext import ParseText
+from parsetext import Convertor
 
-GetHTML.test()
-GetHTML.makeOutput()
+""" ~ Phase 1 ~ """
+TestConnection.test()
 
-ParseText.parsehtml()
-ParseText.parsedata()
+Scrape.generateData()
+
+""" ~ Phase 2 ~ """
+Convertor.cleanup()
+Convertor.convert_to_csv()
+
+# © David Pescariu 2020 - Open-source @ github.com/davidp-ro
