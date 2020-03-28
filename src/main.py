@@ -3,6 +3,11 @@
 and exporting it as a csv, or show graphs about it <- WIP
 """
 
+#FIXME: See parsetext.py
+
+#TODO: Graphical interface, probably with kivy
+#TODO: Web-page to see the results
+
 # Gather data from https://www.worldometers.info/coronavirus/
 from parsehtml import TestConnection, Scrape
 
@@ -19,3 +24,4 @@ Convertor.cleanup()
 Convertor.convert_to_csv()
 
 # © David Pescariu 2020 - Open-source @ github.com/davidp-ro
+# License: See LICENSE file
