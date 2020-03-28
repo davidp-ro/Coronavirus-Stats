@@ -1,3 +1,21 @@
+
+
+
+Country,Other
+TotalCases
+NewCases
+TotalDeaths
+NewDeaths
+TotalRecovered
+ActiveCases
+Serious,Critical
+Tot Cases/1M pop
+Deaths/1M pop
+1stcase
+
+
+
+
 USA
 104,256
 +130
