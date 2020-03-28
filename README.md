@@ -1,3 +1,5 @@
+Update 28 Mar. -- Stats not working due to worldometers adding some data. Fix in progress
+
 # Coronavirus Stats
 A small thing I made to experiment with web-scraping, as always still work in progress.
 
