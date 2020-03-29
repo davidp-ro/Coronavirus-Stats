@@ -14,14 +14,18 @@ from parsehtml import TestConnection, Scrape
 # Parse the data and convert it:
 from parsetext import Convertor
 
-""" ~ Phase 1 ~ """
-TestConnection.test()
+def main():
+    """ ~ Phase 1 ~ """
+    TestConnection.test()
 
-Scrape.generateData()
+    Scrape.generateData()
 
-""" ~ Phase 2 ~ """
-Convertor.cleanup()
-Convertor.convert_to_csv()
+    """ ~ Phase 2 ~ """
+    Convertor.cleanup()
+    Convertor.convert_to_csv()
+
+if __name__ == "__main__":
+    main()
 
 # © David Pescariu 2020 - Open-source @ github.com/davidp-ro
 # License: See LICENSE file
