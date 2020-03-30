@@ -1,7 +1,8 @@
+"""
+Release 1.1 | github.com/davidp-ro
+"""
 import re
-
-#FIXME: China shows up at the end of the table only?
-#FIXME: Each row has 2 commas due to the empty lines abw them and the way I parse the text
+import datetime
 
 class Convertor():
     def cleanup():
@@ -15,7 +16,7 @@ class Convertor():
         """
         clean = []
         
-        with open('data/tableData.txt', 'r') as toClean, open('data/data.txt', 'w') as cleaned:
+        with open('rawdata/tableData.txt', 'r') as toClean, open('rawdata/data.txt', 'w') as cleaned:
             for _ in range(18):
                 clean.append(next(toClean))
             for line in toClean:
@@ -23,9 +24,9 @@ class Convertor():
     
 
     def convert_to_csv():
-        with open('data/data.txt', 'r') as data, open('data/data.csv', 'w') as csv:
+        with open('rawdata/data.txt', 'r') as data, open('rawdata/data.csv', 'w') as csv:
             # Header:
-            csv.write("Country,Total Cases,New Cases,Total Deaths,New Deaths,Total Recovered,Active Cases,Serious/Critical,Total Cases/1M Pop,Deaths/1M Pop,github.com/davidp-ro,1st case date\n\n")
+            csv.write("Country,Total Cases,New Cases,Total Deaths,New Deaths,Total Recovered,Active Cases,Serious/Critical,Total Cases/1M Pop,Deaths/1M Pop,github.com/davidp-ro,1st case date__\n")
             # Data:
             lines = data.readlines()
 
@@ -38,5 +39,19 @@ class Convertor():
                     count += 1
                 else:
                     csv.write('\n')       
-                    count = 1            
+                    count = 1   
+
+
+class CreateFinal():
+    def makefile():
+        DATETIME = datetime.datetime.now()
+        DATETIME = str(DATETIME.strftime("%d")) + str(DATETIME.strftime("%b") + str(DATETIME.strftime("%Y"))) + '_' + str(DATETIME.strftime("%H")) + str(DATETIME.strftime("%M"))
+        FILENAME = 'data/data_' + DATETIME + '.csv'
+
+        with open('rawdata/data.csv', 'r') as csv, open(FILENAME, 'w') as final:
+            lines =  csv.readlines()
+
+            for line in lines:
+                line = str(line)[:-3] 
+                final.write(line+'\n')     
                     

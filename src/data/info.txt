@@ -1,0 +1,3 @@
+COVID-19 Data gathered from https://www.worldometers.info/coronavirus/
+----------------------------------------------------------------------
+Made with <3 by David Pescariu |||| Open-source @ github.com/davidp-ro
