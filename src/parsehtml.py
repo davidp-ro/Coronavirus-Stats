@@ -1,3 +1,6 @@
+"""
+Release 1.1 | github.com/davidp-ro
+"""
 # Imports:
 import sys
 import re
@@ -30,7 +33,7 @@ class Scrape():
             soup = BeautifulSoup(page.text, 'lxml') # Get the page
             table = soup.find_all('table', attrs={'id':'main_table_countries_today'}) # Parse the html, and get data from the table
 
-            with open('data/tableData.txt', 'w') as data:
+            with open('rawdata/tableData.txt', 'w') as data:
                 for row in table:
                     data.write(re.sub('<[^>]+>', '', str(row)))
                     print("[Info] Data gathered.")
