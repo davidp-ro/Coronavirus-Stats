@@ -32,6 +32,16 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-left: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.tab {
+  position: absolute;
+  left: 150px;
+}
 
 
 /* Scrollbar: */
@@ -93,9 +103,35 @@ body::-webkit-scrollbar-track {
 }
 
 
+/***************** Per Page Style *******************/
+/* export.html: */
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+
 
 /* Mobile-responsive: */
 @media only screen and (max-width: 600px) {
+  main {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  p1 {
+    margin: 0;
+  }
+
   .navbar {
     bottom: 0;
     width: 100vw;
@@ -114,7 +150,9 @@ body::-webkit-scrollbar-track {
     display: none;
   }
 
-  main {
+  .btn {
     margin: 0;
   }
 }
+
+
