@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $.ajax({
         type: "GET",
-        url: "data.txt",
+        url: "data/data.txt",
         dataType: "text",
         succes: function(data) {proccesData(data);}
     });
