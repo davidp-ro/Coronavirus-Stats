@@ -2,7 +2,6 @@
     Small project to gather data from worldometers about the COVID outbreak
 and exporting it as a csv, or show graphs about it <- WIP
 
-Release 1.1 | github.com/davidp-ro
 Release 3.0 | github.com/davidp-ro
 """
 
@@ -40,7 +39,6 @@ def main():
         print("Usage: -gui if you want to run with a GUI, or -no_gui to run in the CLI")
 
 
-# CStats v2.0
 # CStats v3.0
 if __name__ == "__main__":
     main()
