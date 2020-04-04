@@ -1,5 +1,6 @@
 """
 Release 1.1 | github.com/davidp-ro
+Release 3.0 | github.com/davidp-ro
 """
 # Imports:
 import sys
@@ -60,6 +61,7 @@ class Scrape():
             logging.warning('Unexpected:')
             logging.exception('Exception occured in the generateData method')
             logging.warning('CStats exiting - [v2.0]')
+            logging.warning('CStats exiting - [v3.0]')
             sys.exit()
 
 # © David Pescariu 2020 - Open-source @ github.com/davidp-ro

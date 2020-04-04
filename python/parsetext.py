@@ -1,5 +1,6 @@
 """
 Release 1.1 | github.com/davidp-ro
+Release 3.0 | github.com/davidp-ro
 """
 import re
 import datetime
@@ -23,6 +24,7 @@ class Convertor():
         try:
             with open('rawdata/tableData.txt', 'r') as toClean, open('rawdata/data.txt', 'w') as cleaned:
                 for _ in range(17):
+                for _ in range(21):
                     clean.append(next(toClean))
                 for line in toClean:
                     cleaned.write(line)
@@ -38,6 +40,7 @@ class Convertor():
             with open('rawdata/data.txt', 'r') as data, open('rawdata/data.csv', 'w') as csv:
                 # Header:
                 csv.write("Country,Total Cases,New Cases,Total Deaths,New Deaths,Total Recovered,Active Cases,Serious/Critical,Total Cases/1M Pop,Deaths/1M Pop__\n")
+                csv.write("Country,Total Cases,New Cases,Total Deaths,New Deaths,Total Recovered,Active Cases,Serious/Critical,Total Cases/1M Pop,Deaths/1M Pop,Total Tests, Tests/1M Pop__\n")
                 # Data:
                 lines = data.readlines()
 
@@ -46,6 +49,7 @@ class Convertor():
                 for line in lines:
                     line = re.sub('[,]', '.', str(line))
                     if count < 12:
+                    if count < 14:
                         csv.write(''.join(str(line))[:-1] + ',')
                         count += 1
                     else:

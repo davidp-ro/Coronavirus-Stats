@@ -3,6 +3,7 @@
 and exporting it as a csv, or show graphs about it <- WIP
 
 Release 1.1 | github.com/davidp-ro
+Release 3.0 | github.com/davidp-ro
 """
 
 #TODO: Graphical interface <-----> WIP as well
@@ -40,6 +41,7 @@ def main():
 
 
 # CStats v2.0
+# CStats v3.0
 if __name__ == "__main__":
     main()
 
