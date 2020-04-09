@@ -14,6 +14,12 @@ from tkinter import filedialog
 
 import os
 
+# Design:
+BG_WINDOW = '#1a1b40'
+TITLE_TXT = '#ffffff'
+BUTTON_BG = '#26425c'
+BUTTON_TX = '#ffffff'
+
 # Button functions:
 def start_batch():
     logging.debug('startBatch button pressed.')
@@ -32,11 +38,12 @@ def start_batch():
 def view_data():
     logging.debug('viewData button pressed.')
 
-    DATA_DIR = os.getcwd() + '/data'
+    DATA_DIR = '../data'
 
     filename = filedialog.askopenfilename(initialdir=DATA_DIR, title="Select the file that you want to view")
-    print("[OPENING] Please wait")
-    os.system(filename)
+    if len(filename) > 2:
+        print("[OPENING] Please wait")
+        os.system(filename)
 
 
 class MainApplication(tk.Frame):
@@ -44,18 +51,18 @@ class MainApplication(tk.Frame):
         tk.Frame.__init__(self, parent, *args, **kwargs)
         self.parent = parent
         # Title:
-        self.label = tk.Label(parent, text="Coronavirus Stats", height=2, width=35)
+        self.label = tk.Label(parent, text="Coronavirus Stats", height=2, width=35, bg=BG_WINDOW, fg=TITLE_TXT)
         self.label.pack()
         # Buttons:
-        self.startBatch = tk.Button(parent, text="Collect and generate data.",
-                        height=3, width=35, command=start_batch)
-        self.viewData = tk.Button(parent, text="View the data", 
-                        height=3, width=35, command=view_data)
+        self.startBatch = tk.Button(parent, text="Collect and generate data.", bg=BUTTON_BG, fg=BUTTON_TX,
+                        height=3, width=34, command=start_batch)
+        self.viewData = tk.Button(parent, text="View the data", bg=BUTTON_BG, fg=BUTTON_TX,
+                        height=3, width=34, command=view_data)
 
         self.startBatch.pack()
         self.viewData.pack()
         #Footer:
-        self.label = tk.Label(parent, text="Made with 💚 by David Pescariu\nOpen-source @ github.com/davidp-ro", height=2, width=35)
+        self.label = tk.Label(parent, text="Made with 💚 by David Pescariu\nOpen-source @ github.com/davidp-ro", height=2, width=35, bg=BG_WINDOW, fg=TITLE_TXT)
         self.label.pack()
         logging.info('Window generated.')
 

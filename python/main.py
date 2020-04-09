@@ -5,8 +5,7 @@ and exporting it as a csv, or show graphs about it <- WIP
 Release 3.0 | github.com/davidp-ro
 """
 
-#TODO: Graphical interface <-----> WIP as well
-#TODO: Web-page to see the results <-----> WIP
+#TODO: Web-page to see the results <-> WIP
 
 import sys
 
