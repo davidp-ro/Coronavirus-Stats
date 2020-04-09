@@ -1,10 +1,10 @@
 # Coronavirus Stats
 A small thing I made to experiment with web-scraping.
 
-After running, in the src/data/ folder there will be a data.csv file with all the stats available @ this moment.
+After running, in the data folder there will be a data.csv file with all the stats available @ this moment _(each file has a timestamp)_.
 
-### Release 3.0 will include a built in executable
-##### And maybe the web-page... still working on that
+### Release 3.1 will include a built in executable
+###### And maybe the web-page... still working on that
 
 # Data gathered from [Worldometer](https://www.worldometers.info/coronavirus/)
 

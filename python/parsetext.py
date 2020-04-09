@@ -1,5 +1,5 @@
 """
-Release 1.1 | github.com/davidp-ro
+Release 3.0 | github.com/davidp-ro
 """
 import re
 import datetime
@@ -22,7 +22,8 @@ class Convertor():
         
         try:
             with open('rawdata/tableData.txt', 'r') as toClean, open('rawdata/data.txt', 'w') as cleaned:
-                for _ in range(17):
+
+                for _ in range(156):
                     clean.append(next(toClean))
                 for line in toClean:
                     cleaned.write(line)
@@ -37,7 +38,8 @@ class Convertor():
         try:
             with open('rawdata/data.txt', 'r') as data, open('rawdata/data.csv', 'w') as csv:
                 # Header:
-                csv.write("Country,Total Cases,New Cases,Total Deaths,New Deaths,Total Recovered,Active Cases,Serious/Critical,Total Cases/1M Pop,Deaths/1M Pop__\n")
+
+                csv.write("Country,Total Cases,New Cases,Total Deaths,New Deaths,Total Recovered,Active Cases,Serious/Critical,Total Cases/1M Pop,Deaths/1M Pop,Total Tests,Tests/1M Pop,Continent__\n")
                 # Data:
                 lines = data.readlines()
 
@@ -45,7 +47,8 @@ class Convertor():
 
                 for line in lines:
                     line = re.sub('[,]', '.', str(line))
-                    if count < 12:
+
+                    if count < 15:
                         csv.write(''.join(str(line))[:-1] + ',')
                         count += 1
                     else:
@@ -62,7 +65,7 @@ class CreateFinal():
     def makefile():
         DATETIME = datetime.datetime.now()
         DATETIME = str(DATETIME.strftime("%d")) + str(DATETIME.strftime("%b") + str(DATETIME.strftime("%Y"))) + '_' + str(DATETIME.strftime("%H")) + str(DATETIME.strftime("%M"))
-        FILENAME = 'data/data_' + DATETIME + '.csv'
+        FILENAME = '../data/data_' + DATETIME + '.csv'
 
         try:
             with open('rawdata/data.csv', 'r') as csv, open(FILENAME, 'w') as final:
