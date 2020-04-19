@@ -6,7 +6,7 @@
     Result:
         in the dist folder -> look for .exe
 
-    CStats v3.0
+    CStats v3.1
 """
 import os
 

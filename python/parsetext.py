@@ -1,5 +1,5 @@
 """
-Release 3.0 | github.com/davidp-ro
+Release 3.1 | github.com/davidp-ro
 """
 import re
 import datetime
