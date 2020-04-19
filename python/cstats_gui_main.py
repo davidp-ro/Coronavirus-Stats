@@ -70,7 +70,7 @@ class MainApplication(tk.Frame):
 def main():
     root = tk.Tk()
     MainApplication(root).pack(side="top", fill="both", expand=True)
-    root.title('CStats v3.0')
+    root.title('CStats v3.1')
     root.iconbitmap('logo.ico') # Source: https://unsplash.com/photos/EAgGqOiDDMg
     root.mainloop()
 

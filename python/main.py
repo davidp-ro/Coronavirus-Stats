@@ -2,7 +2,7 @@
     Small project to gather data from worldometers about the COVID outbreak
 and exporting it as a csv, or show graphs about it <- WIP
 
-Release 3.0 | github.com/davidp-ro
+Release 3.1 | github.com/davidp-ro
 """
 
 #TODO: Web-page to see the results <-> WIP
